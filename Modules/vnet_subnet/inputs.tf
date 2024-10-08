@@ -1,29 +1,31 @@
-# Define Variables
+# inputs.tf (Module: vnet_subnet_vm)
 
 variable "resource_group_name" {
-  type = string
-  default = "practice1"
+  type        = string
+  description = "The name of the resource group."
 }
 
 variable "location" {
-  type = string
-  default = "eastus2"
+  type        = string
+  description = "The Azure region where resources will be created."
 }
 
-variable "primary_network_cidr" {
+variable "vnet_name" {
+  type        = string
+  description = "The name of the Virtual Network."
+}
+
+variable "vnet_cidr" {
   type        = list(string)
-  description = "This is primary networks cidr range"
-  default     = ["192.168.0.0/16"]
+  description = "The CIDR block for the Virtual Network."
 }
 
 variable "subnet_names" {
   type        = list(string)
-  description = "subnet names"
-  default     = ["web", "app", "db"]
+  description = "A list of subnet names."
 }
 
 variable "subnet_cidrs" {
   type        = list(string)
-  description = "subnet cidrs"
-  default     = ["192.168.0.0/24", "192.168.1.0/24", "192.168.2.0/24"]
+  description = "A list of subnet CIDR blocks."
 }

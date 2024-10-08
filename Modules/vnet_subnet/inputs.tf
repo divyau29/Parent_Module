@@ -2,10 +2,12 @@
 
 variable "resource_group_name" {
   type = string
+  default = "practice1"
 }
 
 variable "location" {
   type = string
+  default = "eastus2"
 }
 
 variable "primary_network_cidr" {

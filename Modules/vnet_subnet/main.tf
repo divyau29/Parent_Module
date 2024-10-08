@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "group" {
-  name     = "practice"
-  location = "eastus2"
+  name     = var.resource_group_name
+  location = var.location
   tags = {
     CreatedBy = "Terraform"
   }

@@ -1,10 +1,10 @@
-resource "azurerm_resource_group" "group" {
-  name     = var.resource_group_name
-  location = var.location
-  tags = {
-    CreatedBy = "Terraform"
-  }
-}
+# resource "azurerm_resource_group" "group" {
+#   name     = var.resource_group_name
+#   location = var.location
+#   tags = {
+#     CreatedBy = "Terraform"
+#   }
+# }
 
 resource "azurerm_virtual_network" "vnet" {
   name                = "primary"
@@ -22,7 +22,7 @@ resource "azurerm_virtual_network" "vnet" {
 resource "azurerm_subnet" "subnets" {
   count                = length(var.subnet_names)
   name                 = var.subnet_names[count.index]
-  resource_group_name  = azurerm_resource_group.group.name
+  resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = [var.subnet_cidrs[count.index]]
   depends_on           = [azurerm_virtual_network.vnet]

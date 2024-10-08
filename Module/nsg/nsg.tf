@@ -1,17 +1,12 @@
-# Create public ip address
-
-resource "azurerm_public_ip" "web" {
-  name                = "webip"
-  resource_group_name = azurerm_resource_group.group.name
-  location            = azurerm_resource_group.group.location
-  allocation_method   = "Static"
-  sku                 = "Standard"
+resource "azurerm_resource_group" "group" {
+  name     = "poc"
+  location = "eastus2"
   tags = {
     Name      = "poc"
     CreatedBy = "Terraform"
   }
-}
 
+}
 
 # Create Network Security Group
 

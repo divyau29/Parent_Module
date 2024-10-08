@@ -37,3 +37,17 @@ resource "azurerm_subnet" "subnets" {
   ]
 
 }
+
+# Create public ip address
+
+resource "azurerm_public_ip" "web" {
+  name                = "webip"
+  resource_group_name = azurerm_resource_group.group.name
+  location            = azurerm_resource_group.group.location
+  allocation_method   = "Static"
+  sku                 = "Standard"
+  tags = {
+    Name      = "poc"
+    CreatedBy = "Terraform"
+  }
+}

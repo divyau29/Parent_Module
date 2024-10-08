@@ -1,3 +1,11 @@
+resource "azurerm_resource_group" "group" {
+  name     = "practice"
+  location = "eastus2"
+  tags = {
+    CreatedBy = "Terraform"
+  }
+}
+
 resource "azurerm_virtual_network" "vnet" {
   name                = "primary"
   resource_group_name = azurerm_resource_group.group.name

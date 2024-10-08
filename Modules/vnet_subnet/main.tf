@@ -9,7 +9,6 @@ resource "azurerm_virtual_network" "vnet" {
     Environment = "Dev"
     CreatedBy   = "Terraform"
   }
-  depends_on = [azurerm_resource_group.group]
 }
 
 # create multiple subnets

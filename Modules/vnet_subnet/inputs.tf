@@ -1,4 +1,4 @@
-# inputs.tf (Module: vnet_subnet_vm)
+# Virtual Network and Subnet Module: inputs.tf
 
 variable "resource_group_name" {
   type        = string

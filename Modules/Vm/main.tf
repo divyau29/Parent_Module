@@ -56,8 +56,8 @@ resource "azurerm_virtual_machine" "vm" {
   storage_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServe" #"UbuntuServer"
-    sku       = "22.04-LTS"  # You can change to 22.04-LTS or any other supported version
-    version   = "latest"
+    sku       = "20.04-LTS"  # You can change to 22.04-LTS or any other supported version
+    version   = "20.04.202208310"
   }
 
   tags = {

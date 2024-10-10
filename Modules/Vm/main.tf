@@ -55,8 +55,8 @@ resource "azurerm_virtual_machine" "vm" {
   # Reference to Ubuntu image in Azure marketplace
   storage_image_reference {
     publisher = "Canonical"
-    offer     = "UbuntuServe" #"UbuntuServer"
-    sku       = "20.04-LTS"  # You can change to 22.04-LTS or any other supported version
+    offer     = "Ubuntu Server" #"UbuntuServer"
+    sku       = "24.04 LTS"  # You can change to 22.04-LTS or any other supported version
     version   = "20.04.202208310"
   }
 

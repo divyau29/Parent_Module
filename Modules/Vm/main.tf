@@ -41,7 +41,7 @@ resource "azurerm_linux_virtual_machine" "web" {
     publisher = var.publisher
     offer     = var.offer
     sku       = var.sku
-    version   = "2.12.0.2"
+    version   = "latest"
   }
 
 }

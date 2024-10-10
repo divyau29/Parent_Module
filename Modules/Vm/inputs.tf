@@ -41,3 +41,25 @@ variable "subnet_id" {
   type        = string
   description = "The ID of the subnet where the VM will be deployed."
 }
+
+variable "publisher" {
+  type = string
+  description = "publisher name"
+}
+
+variable "offer" {
+  type = string
+  description = "offer"
+}
+
+variable "sku" {
+  type = string
+  description = "sku"
+  
+}
+
+variable "version" {
+  type = string
+  description = "latest version"
+  
+}

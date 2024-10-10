@@ -33,9 +33,9 @@ resource "azurerm_virtual_machine" "vm" {
 
   storage_os_disk {
     name              = var.vm_name
-    caching           = "ReadWrite"
+    # caching           = "ReadWrite"
     create_option     = "FromImage"
-    disk_size_gb      = var.vm_os_disk_size
+    # disk_size_gb      = var.vm_os_disk_size
   }
 
   os_profile {

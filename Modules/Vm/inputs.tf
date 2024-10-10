@@ -58,8 +58,8 @@ variable "sku" {
   
 }
 
-variable "version" {
-  type = string
-  description = "latest version"
+# variable "version" {
+#   type = string
+#   description = "latest version"
   
-}
+# }

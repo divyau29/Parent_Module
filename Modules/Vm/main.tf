@@ -40,7 +40,7 @@ resource "azurerm_linux_virtual_machine" "web" {
     publisher = var.web_vm_info.publisher
     offer     = var.web_vm_info.offer
     sku       = var.web_vm_info.sku
-    version   = var.web_vm_info.version
+    version   = "2.12.0.2"
   }
 
 }

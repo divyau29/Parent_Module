@@ -1,7 +1,7 @@
 # Virtual Machine Module: outputs.tf
 
 output "vm_id" {
-  value = azurerm_virtual_machine.vm.id
+  value = azurerm_linux_virtual_machine.web.id
 }
 
 output "nic_id" {

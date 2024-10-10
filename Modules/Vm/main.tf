@@ -37,9 +37,9 @@ resource "azurerm_linux_virtual_machine" "web" {
     storage_account_type = "Standard_LRS"
   }
   source_image_reference {
-    publisher = var.web_vm_info.publisher
-    offer     = var.web_vm_info.offer
-    sku       = var.web_vm_info.sku
+    publisher = var.publisher
+    offer     = var.offer
+    sku       = var.sku
     version   = "2.12.0.2"
   }
 
